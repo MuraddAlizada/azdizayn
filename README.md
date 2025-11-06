@@ -1,6 +1,6 @@
 # AzDizayn - Veb Sayt
 
-AzDizayn şirkətinin rəsmi veb saytı. Tikinti materialları, seramik, təbii daşlar və digər məhsulların satışı üçün hazırlanmış veb platforma.
+AzDizayn  veb saytı. Tikinti materialları, seramik, təbii daşlar və digər məhsulların satışı üçün hazırlanmış veb platforma.
 
 ## 📁 Proyekt Strukturu
 
