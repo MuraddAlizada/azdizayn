@@ -1,0 +1,142 @@
+/* Services Page Styles */
+
+.services-content-section {
+  padding: 80px 0;
+  background-color: var(--textWhite);
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.services-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--textStrong);
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: var(--fontGrotesk);
+}
+
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.service-item {
+  background-color: #e0e0e0;
+  border-radius: 12px;
+  padding: 20px 25px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.service-item:hover {
+  background-color: #000000;
+  color: #ffffff;
+  transform: translateX(5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-item:hover .service-text {
+  color: #ffffff;
+}
+
+.service-checkmark {
+  color: #28a745;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.service-item:hover .service-checkmark {
+  color: #28a745;
+}
+
+.service-text {
+  font-size: 18px;
+  font-weight: 500;
+  color: #333333;
+  font-family: var(--fontManrope);
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .services-container {
+    padding: 0 40px;
+  }
+
+  .services-title {
+    font-size: 38px;
+    margin-bottom: 40px;
+  }
+
+  .service-text {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-content-section {
+    padding: 60px 0;
+  }
+
+  .services-container {
+    padding: 0 20px;
+  }
+
+  .services-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+
+  .service-item {
+    padding: 18px 20px;
+    gap: 12px;
+  }
+
+  .service-text {
+    font-size: 16px;
+  }
+
+  .service-checkmark {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-content-section {
+    padding: 40px 0;
+  }
+
+  .services-container {
+    padding: 0 15px;
+  }
+
+  .services-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  .service-item {
+    padding: 15px 18px;
+    gap: 10px;
+  }
+
+  .service-text {
+    font-size: 15px;
+  }
+
+  .service-checkmark {
+    font-size: 16px;
+  }
+}
+

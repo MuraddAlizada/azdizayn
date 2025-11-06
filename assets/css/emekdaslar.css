@@ -1,0 +1,208 @@
+/* Employees Page Styles */
+
+.employees-content-section {
+  padding: 40px 0 80px 0;
+  background-color: var(--textWhite);
+}
+
+.employees-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.employees-filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.filter-tab {
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--textBlack);
+  font-weight: 500;
+}
+
+.filter-tab:hover {
+  background-color: #e0e0e0;
+}
+
+.filter-tab.active {
+  background-color: #dc3545;
+  color: #ffffff;
+}
+
+.employees-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+
+.employee-card {
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  padding: 30px 20px;
+  width: 100%;
+  max-width: 300px;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.employee-card:hover {
+  border: 2px solid #dc3545;
+}
+
+.employee-card:hover .employee-name,
+.employee-card:hover .employee-position,
+.employee-card:hover .employee-email {
+  color: #dc3545;
+}
+
+.employee-image-wrapper {
+  width: 150px;
+  height: 180px;
+  margin-bottom: 20px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.employee-image-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.employee-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  object-position: center;
+  background-color: #ffffff;
+  border: 2px solid #e0e0e0;
+  padding: 4px;
+  display: block;
+}
+
+/* For large images - full visibility of heads */
+.employee-image.image-close-up {
+  object-position: center 20%;
+  object-fit: cover;
+}
+
+/* For small images - zoom/enlargement */
+.employee-image.image-far-away {
+  object-fit: cover;
+  transform: scale(1.4);
+  object-position: center center;
+}
+
+.employee-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--textBlack);
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.employee-position {
+  font-size: 0.95rem;
+  color: var(--textBlack);
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.employee-email {
+  font-size: 0.85rem;
+  color: var(--textBlack);
+  transition: color 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .employees-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .employees-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .employees-container {
+    padding: 0 40px;
+  }
+
+  .employees-filter-tabs {
+    gap: 8px;
+  }
+
+  .filter-tab {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .employees-content-section {
+    padding: 30px 0 60px 0;
+  }
+
+  .employees-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 0 20px;
+  }
+
+  .employees-container {
+    padding: 0 20px;
+  }
+
+  .employees-filter-tabs {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .filter-tab {
+    width: 100%;
+    text-align: center;
+  }
+
+  .employee-card {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .employees-content-section {
+    padding: 20px 0 40px 0;
+  }
+
+  .employee-image-wrapper {
+    width: 120px;
+    height: 144px;
+  }
+}

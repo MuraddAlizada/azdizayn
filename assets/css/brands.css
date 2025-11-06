@@ -1,0 +1,89 @@
+/* Brands Page Styles */
+
+.brands-content-section {
+  padding: 80px 0;
+  background-color: #d9d9d9;
+}
+
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 60px;
+  justify-items: center;
+}
+
+.brand-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.brand-card:hover {
+  transform: translateY(-2px);
+}
+
+.brand-logo {
+  background: rgb(255, 255, 255);
+  width: 186px;
+  aspect-ratio: 3 / 2;
+  padding: 5px;
+  border-radius: 24px;
+  object-fit: contain;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .brands-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .brands-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .brands-content-section {
+    padding: 60px 0;
+  }
+
+  .brands-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .brand-logo {
+    width: 186px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brands-content-section {
+    padding: 40px 0;
+  }
+
+  .brands-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 15px;
+  }
+
+  .brand-logo {
+    width: 186px;
+    margin: 0 auto;
+  }
+}
+
